@@ -1,0 +1,3 @@
+include ':end'
+include ':app'
+rootProject.name = "AndroidInterview"
