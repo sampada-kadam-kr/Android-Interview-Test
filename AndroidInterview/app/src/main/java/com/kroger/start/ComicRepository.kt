@@ -1,9 +1,8 @@
 package com.kroger.start
 
-import com.kroger.start.db.Comic
 
 interface ComicRepository {
-    suspend fun getCurrentComic(): Comic
+    suspend fun getCurrentComic()
 }
 
 abstract class RemoteRepository constructor() :
