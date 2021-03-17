@@ -10,7 +10,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.kroger.androidinterview"
+        applicationId "com.kroger.end"
         minSdkVersion 22
         targetSdkVersion 29
         versionCode 1
@@ -47,6 +47,7 @@ dependencies {
     //room
     implementation "androidx.room:room-runtime:2.2.6"
     kapt "androidx.room:room-compiler:2.2.6"
+    implementation 'androidx.room:room-ktx:2.2.6'
     androidTestImplementation "androidx.room:room-testing:2.2.6"
 
     //retrofit
@@ -60,6 +61,9 @@ dependencies {
     //hilt
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-compiler:$hilt_version"
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
 
 
     testImplementation 'junit:junit:4.13.2'

@@ -7,8 +7,8 @@
 
     <fragment
         android:id="@+id/ComicFragment"
-        android:name="com.kroger.androidinterview.ComicFragment"
-        tools:layout="@layout/fragment_comic">
+        android:name="com.kroger.end.ComicFragment"
+        tools:layout="@layout/fragment_comic_details">
 
     </fragment>
 </navigation>
