@@ -24,7 +24,7 @@ interface ComicDao {
     @Query("SELECT * FROM comic_table ORDER BY num DESC")
     fun getComics(): List<Comic>
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(comic: Comic)
 
     @Query("DELETE FROM comic_table")

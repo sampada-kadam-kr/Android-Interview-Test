@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -47,6 +48,19 @@ dependencies {
     implementation "androidx.room:room-runtime:2.2.6"
     kapt "androidx.room:room-compiler:2.2.6"
     androidTestImplementation "androidx.room:room-testing:2.2.6"
+
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+    //moshi
+    implementation 'com.squareup.moshi:moshi:1.9.2'
+    implementation 'com.squareup.moshi:moshi-kotlin:1.9.2'
+    //okhttp
+    implementation 'com.squareup.okhttp3:okhttp:3.14.9'
+    //hilt
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
+
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
