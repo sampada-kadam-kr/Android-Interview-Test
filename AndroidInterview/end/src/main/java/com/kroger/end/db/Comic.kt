@@ -22,7 +22,7 @@ class Comic(
 interface ComicDao {
 
     @Query("SELECT * FROM comic_table ORDER BY num DESC")
-    fun getComics(): List<Comic>
+    suspend fun getComics(): List<Comic>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(comic: Comic)

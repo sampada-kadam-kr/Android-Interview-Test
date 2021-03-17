@@ -26,7 +26,10 @@ class ComicViewModel @Inject constructor(
     fun start() {
         viewModelScope.launch {
             val comic = remoteRepository.getCurrentComic()
-            _comic.value = comic
+            localRepository.insertComic(comic)
+
+
+            _comic.value = localRepository.getCurrentComic()
         }
 
     }

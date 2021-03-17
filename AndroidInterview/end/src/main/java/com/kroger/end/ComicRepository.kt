@@ -9,10 +9,15 @@ import javax.inject.Inject
 
 interface ComicRepository {
     suspend fun getCurrentComic(): Comic
+    suspend fun insertComic(comic: Comic)
 }
 
 class RemoteRepository @Inject constructor(private val comicService: ComicService) :
     ComicRepository {
+
+    override suspend fun insertComic(comic: Comic) {
+        TODO("Not  applicable")
+    }
 
     override suspend fun getCurrentComic() =
         withContext(Dispatchers.IO) {
@@ -22,5 +27,7 @@ class RemoteRepository @Inject constructor(private val comicService: ComicServic
 
 
 class LocalRepository @Inject constructor(private val comicDao: ComicDao) : ComicRepository {
+
+    override suspend fun insertComic(comic: Comic) = comicDao.insert(comic)
     override suspend fun getCurrentComic() = comicDao.getComics()[0]
 }
