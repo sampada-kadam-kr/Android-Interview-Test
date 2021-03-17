@@ -25,4 +25,8 @@ retrofit, ok-http, moshi with kotlin for serialization-deserialization is alread
 
 lets define the endpoint using retrofit in ComicService and start from there.
 
+![Screenshot_1616010306](https://user-images.githubusercontent.com/51245997/111528686-d74c8780-8737-11eb-879f-e803d684d5ba.png)
+
+
+
 
