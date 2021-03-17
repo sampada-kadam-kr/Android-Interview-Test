@@ -1,7 +1,6 @@
 package com.kroger.start
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,9 +22,5 @@ class ComicFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        comicViewModel.comic.observe(viewLifecycleOwner) {
-            Log.i("tag", " received $it")
-        }
-        comicViewModel.start()
     }
 }
