@@ -1,6 +1,5 @@
 package com.kroger.start.di
 
-import com.kroger.start.network.ComicService
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
@@ -52,7 +51,4 @@ object NetworkModule {
             .build()
     }
 
-    @Provides
-    fun provideComicService(retrofit: Retrofit): ComicService =
-        retrofit.create(ComicService::class.java)
 }
