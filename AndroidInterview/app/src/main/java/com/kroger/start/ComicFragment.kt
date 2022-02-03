@@ -14,7 +14,8 @@ class ComicFragment : Fragment() {
     private val comicViewModel: ComicViewModel by viewModels()
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_comic_details, container, false)
