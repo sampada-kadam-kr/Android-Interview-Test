@@ -1,5 +1,6 @@
 package com.kroger.start.dependency_injection
 
+import com.kroger.start.network.ComicsApi
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
@@ -16,6 +17,10 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
+
+    @Provides
+    fun provideComicService(retrofit: Retrofit): ComicsApi =
+        retrofit.create(ComicsApi::class.java)
 
     @Provides
     fun provideOkHttpClient(): OkHttpClient {
