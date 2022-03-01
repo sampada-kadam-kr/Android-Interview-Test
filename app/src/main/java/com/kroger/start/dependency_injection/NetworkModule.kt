@@ -1,4 +1,4 @@
-package com.kroger.start.di
+package com.kroger.start.dependency_injection
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -18,8 +18,7 @@ import javax.inject.Singleton
 object NetworkModule {
 
     @Provides
-    fun provideOkHttpClient(
-    ): OkHttpClient {
+    fun provideOkHttpClient(): OkHttpClient {
         return OkHttpClient.Builder()
             .build()
     }
@@ -57,5 +56,4 @@ object NetworkModule {
     @Provides
     @Singleton
     internal fun provideRxJavaCallAdapter() = RxJava3CallAdapterFactory.create()
-
 }
